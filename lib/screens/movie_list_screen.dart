@@ -32,7 +32,7 @@ class _MovieListScreenState extends State<MovieListScreen> {
       imageUrl:
           'https://m.media-amazon.com/images/M/MV5BYzdjMDAxZGItMjI2My00ODA1LTlkNzItOWFjMDU5ZDJlYWY3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg',
       name: 'Interstellar',
-      rating: 8.7,
+      rating: 8,
       watchedDate: DateTime(2021, 7, 18),
       description:
           'A space exploration film that explores the concept of time.',
