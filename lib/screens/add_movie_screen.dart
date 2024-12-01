@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:movie_app/models/movie.dart'; // นำเข้ารูปแบบของ Movie
+import 'package:movie_app/models/movie.dart'; 
 
 class MovieAddScreen extends StatefulWidget {
-  final Movie? movie; // สำหรับการแก้ไขข้อมูล
+  final Movie? movie; // แก้ไขข้อมูล
 
   const MovieAddScreen({super.key, this.movie});
 
@@ -18,8 +18,9 @@ class _MovieAddScreenState extends State<MovieAddScreen> {
       TextEditingController(); // เพิ่มตัวแปรสำหรับ URL รูปภาพ
   DateTime _watchedDate = DateTime.now(); // เก็บวันที่ดู
 
-  String? _nameError; // สำหรับข้อความแจ้งเตือนชื่อหนัง
-  String? _ratingError; // สำหรับข้อความแจ้งเตือนคะแนนรีวิว
+// แจ้งเตือน error
+  String? _nameError; 
+  String? _ratingError; 
 
   @override
   void initState() {
@@ -51,8 +52,8 @@ class _MovieAddScreenState extends State<MovieAddScreen> {
 
   void saveMovie() {
     setState(() {
-      _nameError = null; // รีเซ็ตข้อผิดพลาดชื่อหนัง
-      _ratingError = null; // รีเซ็ตข้อผิดพลาดคะแนนรีวิว
+      _nameError = null; 
+      _ratingError = null; 
     });
 
     // ตรวจสอบข้อมูลที่กรอก
@@ -84,8 +85,8 @@ class _MovieAddScreenState extends State<MovieAddScreen> {
     final newMovie = Movie(
       imageUrl: _imageUrlController.text, // ใช้ URL ที่กรอก
       name: _nameController.text,
-      rating: rating, // คะแนนรีวิว
-      watchedDate: _watchedDate, // วันที่ดู
+      rating: rating, 
+      watchedDate: _watchedDate, 
       description: _descriptionController.text,
     );
     Navigator.pop(context, newMovie); // ส่งกลับข้อมูลหนัง
@@ -108,7 +109,7 @@ class _MovieAddScreenState extends State<MovieAddScreen> {
               controller: _nameController,
               decoration: InputDecoration(
                 labelText: 'Movie Name',
-                errorText: _nameError, // แสดงข้อผิดพลาดของชื่อหนัง
+                errorText: _nameError, // แสดง error ของชื่อหนัง
               ),
             ),
             const SizedBox(height: 10),
@@ -117,7 +118,7 @@ class _MovieAddScreenState extends State<MovieAddScreen> {
               controller: _ratingController,
               decoration: InputDecoration(
                 labelText: 'Rating',
-                errorText: _ratingError, // แสดงข้อผิดพลาดของคะแนนรีวิว
+                errorText: _ratingError, // แสดง error ของคะแนนรีวิว
               ),
               keyboardType: TextInputType.number,
             ),

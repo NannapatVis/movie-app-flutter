@@ -14,7 +14,6 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness: Brightness.dark,
-        primarySwatch: Colors.blue,
         fontFamily: 'Roboto',
         appBarTheme: const AppBarTheme(
           backgroundColor: Color.fromARGB(255, 68, 78, 210),
@@ -25,7 +24,7 @@ class MyApp extends StatelessWidget {
           ),
         ),
         floatingActionButtonTheme: const FloatingActionButtonThemeData(
-          backgroundColor: Color.fromARGB(255, 68, 78, 210), // สีของปุ่ม Add
+          backgroundColor: Color.fromARGB(255, 68, 78, 210),
         ),
       ),
       home: const MovieListScreen(),
