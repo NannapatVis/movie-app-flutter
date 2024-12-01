@@ -87,25 +87,32 @@ class _MovieListScreenState extends State<MovieListScreen> {
                       ClipRRect(
                         borderRadius: BorderRadius.circular(8),
                         child: movie.imageUrl.isNotEmpty
-                            ? Image.network(
-                                movie.imageUrl,
-                                width: 100,
-                                height: 100,
-                                fit: BoxFit.cover,
-                                errorBuilder: (context, error, stackTrace) {
-                                  return Container(
-                                    width: 200,
-                                    height: 200,
-                                    color: Colors.grey[300],
-                                    alignment: Alignment.center,
-                                    child: const Icon(
-                                      Icons.broken_image,
-                                      size: 50,
-                                      color: Colors.grey,
-                                    ),
-                                  );
-                                },
-                              )
+                            ? Uri.tryParse(movie.imageUrl)?.isAbsolute ?? false
+                                ? Image.network(
+                                    movie.imageUrl,
+                                    width: 100,
+                                    height: 100,
+                                    fit: BoxFit.cover,
+                                    errorBuilder: (context, error, stackTrace) {
+                                      return Container(
+                                        width: 100,
+                                        height: 100,
+                                        color: Colors.grey[300],
+                                        alignment: Alignment.center,
+                                        child: const Icon(
+                                          Icons.broken_image,
+                                          size: 50,
+                                          color: Colors.grey,
+                                        ),
+                                      );
+                                    },
+                                  )
+                                : Image.asset(
+                                    movie.imageUrl,
+                                    width: 100,
+                                    height: 100,
+                                    fit: BoxFit.cover,
+                                  )
                             : Container(
                                 width: 100,
                                 height: 100,

@@ -19,19 +19,26 @@ class MovieDetailScreen extends StatelessWidget {
           children: [
             Center(
               child: movie.imageUrl.isNotEmpty
-                  ? Image.network(
-                      movie.imageUrl,
-                      width: 500,
-                      height: 500,
-                      fit: BoxFit.cover,
-                      errorBuilder: (context, error, stackTrace) {
-                        return const Icon(
-                          Icons.broken_image,
-                          size: 150,
-                          color: Colors.grey,
-                        );
-                      },
-                    )
+                  ? Uri.tryParse(movie.imageUrl)?.isAbsolute ?? false
+                      ? Image.network(
+                          movie.imageUrl,
+                          width: 500,
+                          height: 500,
+                          fit: BoxFit.cover,
+                          errorBuilder: (context, error, stackTrace) {
+                            return const Icon(
+                              Icons.broken_image,
+                              size: 150,
+                              color: Colors.grey,
+                            );
+                          },
+                        )
+                      : Image.asset(
+                          movie.imageUrl,
+                          width: 500,
+                          height: 500,
+                          fit: BoxFit.cover,
+                        )
                   : const Icon(
                       Icons.movie,
                       size: 250,

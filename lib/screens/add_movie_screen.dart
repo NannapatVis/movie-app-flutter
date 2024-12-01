@@ -100,7 +100,6 @@ class _MovieAddScreenState extends State<MovieAddScreen> {
             : const Text('Edit Movie'),
       ),
       body: SingleChildScrollView(
-        // เพิ่ม SingleChildScrollView เพื่อให้สามารถเลื่อนหน้าจอได้
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
@@ -135,6 +134,15 @@ class _MovieAddScreenState extends State<MovieAddScreen> {
               decoration: const InputDecoration(labelText: 'Image URL'),
             ),
             const SizedBox(height: 20),
+            // แสดงรูปภาพ
+            _imageUrlController.text.isNotEmpty
+                ? (Uri.tryParse(_imageUrlController.text)?.hasAbsolutePath ??
+                        false
+                    ? Image.network(_imageUrlController.text) // กรณีเป็น URL
+                    : Image.asset(
+                        _imageUrlController.text)) // กรณีเป็น Path ภายใน
+                : const Icon(Icons.image, size: 100),
+            const SizedBox(height: 20),
             // วันที่ดู
             Row(
               children: [
@@ -149,7 +157,6 @@ class _MovieAddScreenState extends State<MovieAddScreen> {
               ],
             ),
             const SizedBox(height: 20),
-            // ปุ่มบันทึก
             ElevatedButton(
               onPressed: saveMovie,
               child: Text(widget.movie == null ? 'Add Movie' : 'Save Changes'),
