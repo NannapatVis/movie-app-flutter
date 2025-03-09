@@ -34,10 +34,10 @@ This project uses the following Flutter packages:
 ## Screenshots
 
 ### Home Screen
-<img src="assets/images/ScreenPageList.png" alt="Home Screen" width="400"/>
+<img src="assets/images/ScreenPageList.png" alt="Home Screen" width="200"/>
 
 ### Movie List
-<img src="assets/images/ScreenPageDes.png" alt="Movie List" width="400"/>
+<img src="assets/images/ScreenPageDes.png" alt="Movie List" width="200"/>
 
 ## Demo GIF
 
