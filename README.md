@@ -1,5 +1,7 @@
 # Movie App
 
+![Demo GIF](assets/images/demo.gif)
+
 A Flutter application for managing a list of movies you have watched. You can add, edit, and delete movies, as well as view their details.
 
 ## Features
