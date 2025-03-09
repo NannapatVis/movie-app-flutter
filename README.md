@@ -42,7 +42,7 @@ This project uses the following Flutter packages:
 ## Demo Video
 
 <video width="500" controls>
-  <source src="assets/videos/demo.mp4" type="video/mp4">
+  <source src="assets/video/demo.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
