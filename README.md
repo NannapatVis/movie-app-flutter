@@ -32,7 +32,20 @@ This project uses the following Flutter packages:
 - `cupertino_icons` (iOS-style icons for the app)
 
 ## Screenshots
-(Add screenshots here if available)
+
+### Home Screen
+<img src="assets/images/ScreenPageList.png" alt="Home Screen" width="400"/>
+
+### Movie List
+<img src="assets/images/ScreenPageDes.png" alt="Movie List" width="400"/>
+
+## Demo Video
+
+<video width="500" controls>
+  <source src="assets/videos/demo.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 
 ## Getting Started with Flutter
 If you're new to Flutter, here are some resources to help you get started:
