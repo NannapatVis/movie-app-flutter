@@ -44,23 +44,10 @@ This project uses the following Flutter packages:
 ![Demo GIF](assets/video/demo.gif)
 
 
-## Demo Video
-
-<video width="500" controls>
-  <source src="assets/video/demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-
-
 ## Getting Started with Flutter
 If you're new to Flutter, here are some resources to help you get started:
 - [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
 - [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 - [Flutter documentation](https://docs.flutter.dev/)
 
-## License
-This project is licensed under the MIT License. Feel free to use and modify it as needed.
-
----
-Feel free to update this README with more details as the project progresses!
 
