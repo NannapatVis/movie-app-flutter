@@ -1,15 +1,15 @@
 class Movie {
-  late final String imageUrl;
   final String name;
   final double rating;
+  final String? description;
+  final String imageUrl;
   final DateTime watchedDate;
-  final String? description;  
 
   Movie({
-    required this.imageUrl,
     required this.name,
     required this.rating,
+    this.description,
+    required this.imageUrl,
     required this.watchedDate,
-    this.description,  
   });
 }
